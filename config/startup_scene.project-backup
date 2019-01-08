@@ -1,0 +1,67 @@
+#Isotropix_Serial_Version 1.1
+
+#Isotropix_Clarisse_Version 3
+#Isotropix_Clarisse_Project_Version 0.92
+Context "scene" {
+    #created 1455809270
+    CameraPerspective {
+        name "camera"
+        #version 0.9
+        #created 1455809270
+        #modified 1462890426
+        translate 28 21 28
+        rotate -27.938 45 0.0
+        aim_distance 44.8218696620299
+        field_of_view 25
+    }
+    LightPhysicalDistant {
+        name "light"
+        #version 0.91
+        #created 1462886261
+        #modified 1462886261
+        rotate -35 125 0.0
+    }
+    RendererPathTracer {
+        name "path_tracer"
+        #version 0.95
+        #created 1462890443
+        #modified 1462890443
+    }
+    Image {
+        name "image"
+        #version 0.92
+        #created 1462886391
+        #modified 1462890426
+        active_layer 0
+        layers ".background"
+        first_frame 0
+        last_frame 50
+        embedded_objects {
+            Layer3d {
+                name "background"
+                #version 0.96
+                #created 1462886428
+                #modified 1462890435
+                first_frame 0
+                last_frame 50
+                deep_output_data_precision 0
+                max_sample_count 0
+                active_camera "camera"
+                renderer "path_tracer"
+                user_data {
+                    __geometries__ {
+                    }
+                    __lights__ {
+                    }
+                }
+            }
+        }
+    }
+}
+#preferences {
+    selection {
+        selection_slots {
+            slot "Global" "project://scene/image"
+        }
+    }
+}
